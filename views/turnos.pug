@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1 Listado de Turnos
+    ul
+      each turno in turnos
+        li #{turno.id} - #{turno.cliente} - #{turno.fecha} #{turno.hora}
