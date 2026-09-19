@@ -1,9 +1,64 @@
 doctype html
 html
   head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title= title
+    style.
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f3f6fb;
+        color: #1f2937;
+        padding: 30px 16px;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 14px;
+        box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+        padding: 24px;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: #2f6fed;
+        font-weight: bold;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        background-color: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+      }
   body
-    h1 Listado de Turnos
-    ul
-      each turno in turnos
-        li #{turno.id} - #{turno.cliente} - #{turno.fecha} #{turno.hora}
+    .container
+      .top
+        h1 Listado de Turnos
+        a(href="/") Volver al inicio
+      ul
+        each turno in turnos
+          li #{turno.id} - #{turno.cliente} - #{turno.fecha} #{turno.hora}
