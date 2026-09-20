@@ -61,4 +61,6 @@ html
         a(href="/") Volver al inicio
       ul
         each turno in turnos
-          li #{turno.id} - #{turno.cliente} - #{turno.fecha} #{turno.hora}
+          li  
+            span #{turno.id} - #{turno.cliente} - #{turno.fecha} #{turno.hora}
+            strong  | Estado: #{turno.estado}

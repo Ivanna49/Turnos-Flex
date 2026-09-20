@@ -22,7 +22,13 @@ class TurnoController {
   static crear(req, res) {
     const turnos = leerTurnos();
     const { cliente, fecha, hora } = req.body;
-    const nuevoTurno = new Turno(turnos.length + 1, cliente, fecha, hora);
+    const nuevoTurno = new Turno(
+      turnos.length + 1,
+      cliente,
+      fecha,
+      hora,
+      'pendiente'
+    );
     turnos.push(nuevoTurno);
     guardarTurnos(turnos);
     res.status(201).json(nuevoTurno);
